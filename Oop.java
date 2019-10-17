@@ -7,6 +7,16 @@ class Book {
     public void readBook() {
         System.out.println("I am reading " + this.title + " written by " + this.author);
     }
+
+    // Constructor
+    public Book() {
+
+    }
+
+    public Book(String title, String author) {
+        this.title = title;
+        this.author = author;
+    }
 }
 
 
@@ -22,7 +32,10 @@ public class Oop {
         book1.author = "Orelly";
 
         book1.readBook();
+        System.out.println("The static variable is : " + Book.staticAttribute);
 
+        Book book2 = new Book("Java ++", "Me");
+        book2.readBook();
     }
 
 
