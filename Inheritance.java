@@ -1,7 +1,7 @@
 
 
 
-class Animal  {
+class Animal {
     public String color;
     public String name;
 
@@ -11,7 +11,7 @@ class Animal  {
     }
 
     public void makeSound() {
-        System.out.println( this.name + " makes sound like an Animal");
+        System.out.println(this.name + " makes sound like an Animal");
     }
 }
 
@@ -19,18 +19,27 @@ class Animal  {
 class Dog extends Animal {
 
     public Dog(String name, String color) {
+
         super(color, name);
     }
 
-
+    @Override
+    public void makeSound() {
+        System.out.println(this.name + " sounds wuf wuf wuf");
+    }
 }
 
 class Cat extends Animal {
 
     public Cat(String name, String color) {
+
         super(color, name);
     }
 
+    @java.lang.Override
+    public void makeSound() {
+        System.out.println(this.name + " sounds meo meo");
+    }
 }
 
 public class Inheritance {
