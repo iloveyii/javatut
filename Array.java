@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+
 public class Array {
 
     public static void main(String[] args) {
@@ -28,6 +30,26 @@ public class Array {
 
             System.out.println();
         }
+
+        // Arrays collection
+
+        ArrayList<Integer> varRolls = new ArrayList<Integer>();
+
+        int randomMax = (int)(Math.random() * 20);
+        System.out.println("Random max is :" + randomMax);
+
+        for(int i = 0; i < randomMax; i++) {
+            varRolls.add((int)(Math.random() * 50));
+        }
+
+        // varRolls.remove();
+        // varRolls.contains();
+
+        int counter = 1;
+        for(int e : varRolls) {
+            System.out.println(counter++ + ": " + e);
+        }
+
     }
 
     // Polymorphism
@@ -44,4 +66,9 @@ public class Array {
             printArray(e);
         }
     }
+
+
+
+
+
 }
