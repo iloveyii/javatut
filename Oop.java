@@ -20,13 +20,9 @@ class Book {
 }
 
 
-
 public class Oop {
 
-
-
-
-    public static void main(String [] args) {
+    public static void main(String[] args) {
         Book book1 = new Book();
         book1.title = "Java in 24 hours";
         book1.author = "Orelly";
@@ -37,6 +33,4 @@ public class Oop {
         Book book2 = new Book("Java ++", "Me");
         book2.readBook();
     }
-
-
 }
