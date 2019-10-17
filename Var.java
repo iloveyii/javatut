@@ -22,6 +22,15 @@ public class Var {
         System.out.println("");
         System.out.println("Your name is " + name);
 
+        /**
+         Format specifiers
+         %f - For float or double
+         %d - Integer
+         %s - String
+         %c - Character
+         %b - Boolean
+         */
+
 
     }
 }
