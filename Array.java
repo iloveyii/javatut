@@ -11,13 +11,26 @@ public class Array {
         System.out.println("Elements of array");
         printArray(rollNumbers);
 
-        int[][] matrix = {{1, 2}, {3, 4}};
+        // 2D Arrays - can have different row length
+        int[][] matrix = {{1, 2, 22}, {3, 4}, {5, 6, 7}};
         System.out.println("Elements of matrix");
-        printArray2(matrix);
+        printArray(matrix);
 
+        System.out.println("Print array using for loop");
 
+        for (int i = 0; i < matrix.length; i++) {
+            int[] row = matrix[i]; // Take row by row
+            int rowLength = row.length;
+
+            for (int j = 0; j < rowLength; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+
+            System.out.println();
+        }
     }
 
+    // Polymorphism
     public static void printArray(int[] arr) {
 
         for (int e : arr) {
@@ -25,10 +38,10 @@ public class Array {
         }
     }
 
-    public static void printArray2(int[][] arr) {
+    public static void printArray(int[][] arr) {
 
         for (int e[] : arr) {
-                printArray(e);
+            printArray(e);
         }
     }
 }
