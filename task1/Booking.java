@@ -41,9 +41,11 @@ public class Booking {
      * By assigning true to the array booking
      */
     public void makeBooking() {
+
         System.out.println("Enter row(1-3) : ");
         int row = userInput.nextInt();
         if (row < 1 || row > 3) row = 1;
+
         System.out.println("Enter column(1-5) : ");
         int column = userInput.nextInt();
         if (column < 1 || column > 5) column = 1;
