@@ -3,7 +3,9 @@ import java.util.Scanner;
 import java.util.*;
 
 public class Booking {
-    boolean[][] booking = new boolean[3][5];
+    static int ROWS = 3;
+    static int COLUMNS = 5;
+    boolean[][] booking = new boolean[ROWS][COLUMNS];
 
     static Scanner userInput = new Scanner(System.in);
 
@@ -15,8 +17,8 @@ public class Booking {
      */
     public void printBooking() {
         System.out.println("      <TV>      ");
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j < COLUMNS; j++) {
                 System.out.print(this.booking[i][j] == true ? " O " : " . ");
             }
             System.out.println("   ");
