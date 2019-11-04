@@ -16,8 +16,7 @@ class Card {
     }
 
     public void printCard() {
-        System.out.println("          <Card>          ");
-        System.out.println("================================ ");
+        System.out.println("------------<Card>--------------");
         System.out.println("Sender: " + this.getSender());
         System.out.println("================================");
         System.out.println();
@@ -26,9 +25,8 @@ class Card {
 
     public String toString() {
         String output = "";
-        output += ("          <Card>          ");
-        output += ("================================ ");
-        output += ("Sender: " + this.getSender());
+        output += ("-----------<Card>---------------\n");
+        output += ("Sender: " + this.getSender() + "\n");
         output += ("\n");
 
         return output;
@@ -54,8 +52,7 @@ class HandDrawn extends Card {
 
     @Override
     public void printCard() {
-        System.out.println("          <HandDrawn>          ");
-        System.out.println("================================");
+        System.out.println("----------<HandDrawn>-----------");
         System.out.println("Sender: " + this.getSender());
         System.out.println("Nice Drawing: " + this.getNiceDrawing());
         System.out.println("================================");
@@ -65,8 +62,7 @@ class HandDrawn extends Card {
 
     public String toString() {
         String output = "";
-        output += ("          <HandDrawn>          \n");
-        output += ("================================ \n");
+        output +=("----------<HandDrawn>-----------\n");
         output += ("Sender: " + this.getSender() + "\n");
         output += ("Nice Drawing: " + this.getNiceDrawing() + "\n");
         output += ("\n\n");
@@ -103,11 +99,6 @@ class Main {
         cards.add(card2);
         cards.add(card3);
         // System.out.println(cards);
-
         printAllCards(cards);
-
-
     }
-
-
 }
