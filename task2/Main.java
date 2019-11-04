@@ -15,7 +15,16 @@ class Card {
         return this.sender;
     }
 
-    public String printCard() {
+    public void printCard() {
+        System.out.println("          <Card>          ");
+        System.out.println("================================ ");
+        System.out.println("Sender: " + this.getSender());
+        System.out.println("================================");
+        System.out.println();
+        System.out.println();
+    }
+
+    public String toString() {
         String output = "";
         output += ("          <Card>          ");
         output += ("================================ ");
@@ -23,10 +32,6 @@ class Card {
         output += ("\n");
 
         return output;
-    }
-
-    public String toString() {
-        return this.printCard();
     }
 
 }
@@ -48,7 +53,17 @@ class HandDrawn extends Card {
     }
 
     @Override
-    public String printCard() {
+    public void printCard() {
+        System.out.println("          <HandDrawn>          ");
+        System.out.println("================================");
+        System.out.println("Sender: " + this.getSender());
+        System.out.println("Nice Drawing: " + this.getNiceDrawing());
+        System.out.println("================================");
+        System.out.println();
+        System.out.println();
+    }
+
+    public String toString() {
         String output = "";
         output += ("          <HandDrawn>          \n");
         output += ("================================ \n");
@@ -57,11 +72,6 @@ class HandDrawn extends Card {
         output += ("\n\n");
 
         return output;
-
-    }
-
-    public String toString() {
-        return this.printCard();
     }
 }
 
@@ -73,9 +83,10 @@ class Main {
 
     public static void printAllCards(List cards) {
         int length = cards.size();
-        System.out.println("Lenght " + length);
+
         for (int i = 0; i < length; i++) {
-            // List c = cards.get(i);
+            Card card = (Card) cards.get(i);
+            card.printCard();
         }
     }
 
@@ -86,13 +97,15 @@ class Main {
 
         HandDrawn card1 = new HandDrawn("Anan", true);
         HandDrawn card2 = new HandDrawn("Kalle", false);
+        Card card3 = new Card("Alex");
 
         cards.add(card1);
         cards.add(card2);
+        cards.add(card3);
+        // System.out.println(cards);
 
-        // printAllCards(cards);
+        printAllCards(cards);
 
-        System.out.println(cards);
 
     }
 
