@@ -10,8 +10,10 @@ public class Booking {
     public Booking() {
     }
 
+    /**
+     * Shows the booking of seats
+     */
     public void printBooking() {
-
         System.out.println("      <TV>      ");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 5; j++) {
@@ -23,20 +25,28 @@ public class Booking {
         System.out.println("   ");
     }
 
+    /**
+     * Prints user menu of available options
+     */
     public void printMenu() {
         System.out.println("1. Book a seat ");
         System.out.println("2. View Booking ");
     }
 
+    /**
+     * Makes booking
+     * Provide row and col and if it is not booked already it will be booked
+     * By assigning true to the array booking
+     */
     public void makeBooking() {
         System.out.println("Enter row(1-3) : ");
         int row = userInput.nextInt();
-        if (row < 1 || row > 3) row = 0;
+        if (row < 1 || row > 3) row = 1;
         System.out.println("Enter column(1-5) : ");
         int column = userInput.nextInt();
-        if (column < 1 || column > 5) column = 0;
+        if (column < 1 || column > 5) column = 1;
 
-        if(this.booking[row - 1][column - 1] == true) {
+        if (this.booking[row - 1][column - 1] == true) {
             System.out.println("This seat is already booked, please book another seat");
         } else {
             this.booking[row - 1][column - 1] = true;
@@ -58,8 +68,6 @@ public class Booking {
 
         }
     }
-
-
 }
 
 // javac -d bin -sourcepath src src/com/ali/chat/Client.java
