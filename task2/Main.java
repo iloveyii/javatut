@@ -77,7 +77,7 @@ class Main {
         System.out.println("Constructor of Main");
     }
 
-    public static void printAllCards(List cards) {
+    public static void printAllCards(ArrayList cards) {
         int length = cards.size();
 
         for (int i = 0; i < length; i++) {
@@ -89,7 +89,7 @@ class Main {
 
     public static void main(String args[]) {
 
-        List<Card> cards = new ArrayList<>();
+        ArrayList<Card> cards = new ArrayList<>();
 
         HandDrawn card1 = new HandDrawn("Anan", true);
         HandDrawn card2 = new HandDrawn("Kalle", false);
