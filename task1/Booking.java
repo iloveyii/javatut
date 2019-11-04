@@ -65,7 +65,6 @@ public class Booking {
             } else {
                 booking.printBooking();
             }
-
         }
     }
 }
