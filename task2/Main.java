@@ -91,7 +91,7 @@ class Main {
 
         ArrayList<Card> cards = new ArrayList<>();
 
-        HandDrawn card1 = new HandDrawn("Anan", true);
+        HandDrawn card1 = new HandDrawn("Anna", true);
         HandDrawn card2 = new HandDrawn("Kalle", false);
         Card card3 = new Card("Alex");
 
